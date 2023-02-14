@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>My awesome users registration system</h1>
+
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add new user</h2>
+
+        <!--email, password, first name, last name, age, address, phone number, payment, color-->
+        <div class="form">
+            <div>
+                <label>Email: </label>
+                <input type="text" id="txtEmail">
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="password" id="txtPassword">
+            </div>
+            <div>
+                <label>First name: </label>
+                <input type="text" id="txtFirstName">
+            </div>
+            <div>
+                <label>Last name:</label>
+                <input type="text" id="txtLastName">
+            </div>
+            <div>
+                <label>Age: </label>
+                <input type="number" id="txtAge">
+            </div>
+            <div>
+                <label>Gender:</label>
+                <input type="text" id="txtGender">
+            </div>
+            <div>
+                <label>Phone:</label>
+                <input type="tel" id="txtPhone">
+            </div>
+            <div>
+                <label>Payment:</label>
+                <select id="selPayment">
+                    <option value="cash">Cash</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="paypal">Paypal</option>
+                </select>
+            </div>
+            <div>
+                <label>Color:</label>
+                <input type="color" id="selColor">
+            </div>
+            
+            <button id="btnAdd">Add</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="scripts/register.js"></script>
+</body>
+</html>
