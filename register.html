@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/mystyle.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,19 +22,19 @@
         <!--email, password, first name, last name, age, address, phone number, payment, color-->
         <div class="form">
             <div>
-                <label>Email: </label>
+                <label>Email*: </label>
                 <input type="text" id="txtEmail">
             </div>
             <div>
-                <label>Password: </label>
+                <label>Password*: </label>
                 <input type="password" id="txtPassword">
             </div>
             <div>
-                <label>First name: </label>
+                <label>First name*: </label>
                 <input type="text" id="txtFirstName">
             </div>
             <div>
-                <label>Last name:</label>
+                <label>Last name*:</label>
                 <input type="text" id="txtLastName">
             </div>
             <div>
@@ -49,8 +50,9 @@
                 <input type="tel" id="txtPhone">
             </div>
             <div>
-                <label>Payment:</label>
+                <label>Payment*:</label>
                 <select id="selPayment">
+                    <option value="" selected >-- pay method --</option>
                     <option value="cash">Cash</option>
                     <option value="credit">Credit Card</option>
                     <option value="paypal">Paypal</option>
@@ -61,6 +63,7 @@
                 <input type="color" id="selColor">
             </div>
             
+            
             <button id="btnAdd">Add</button>
         </div>
     </main>
@@ -69,6 +72,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="scripts/storeManager.js"></script>
     <script src="scripts/register.js"></script>
 </body>
 </html>

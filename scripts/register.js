@@ -10,7 +10,24 @@ function User(email,pass,fname,lname,age,gender,phone,payment,color){
     this.payment=payment;
     this.color=color;  
 }
+function validation(user){
+    let valid=true;
 
+    if(user.email==""){
+        //if I get here it means that the email is empty
+        valid=false;
+        $("#txtEmail").addClass("alert-error");
+    }
+    if(user.color=="#000000"){
+        valid=false;
+        $("#selColor").addClass("alert-error");
+    }
+    if(user.payment==""){
+        valid=false;
+        $("#selPayment").addClass("alert-error");
+    }
+    return valid;
+}
 function register(){
     //get the values from the form
     let inputEmail = $("#txtEmail").val();
@@ -24,9 +41,11 @@ function register(){
     let inputColor = $("#selColor").val();
     //create the user using the constructor
     let newUser = new User(inputEmail,inputPassword,inputFname,inputLname,inputAge,inputGender,inputPhone,inputPayment,inputColor);
-    console.log(newUser);//display the user on the console
-    
+    if(validation(newUser)){
+        saveUser(newUser); //this fn is under storeManager
+    }
     //clear the form
+    $("input").val("");
 }
 
 function init(){
