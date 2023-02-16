@@ -28,6 +28,16 @@ function validation(user){
     }
     return valid;
 }
+
+function validatePass(){
+    let inputPassword = $("#txtPassword"); // this is the HTML element
+    let password = inputPassword.val(); // this is the password
+    if(password.length<6){ 
+        inputPassword.css("background-color","red");//jquery changed the css
+    }else{
+        inputPassword.css("background-color","green");//jquery changed the css
+    }
+}
 function register(){
     //get the values from the form
     let inputEmail = $("#txtEmail").val();
@@ -50,6 +60,7 @@ function register(){
 
 function init(){
     $("#btnAdd").click(register);
+    $("#txtPassword").keyup(validatePass);
 }
 
 window.onload=init;
